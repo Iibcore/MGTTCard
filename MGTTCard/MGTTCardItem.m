@@ -28,7 +28,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor colorWithRed:arc4random() % 0x100 / (float)0xFF  green:arc4random() % 0x100 / (float)0xFF blue:arc4random() % 0x100 / (float)0xFF alpha:1];
+        self.backgroundColor = [UIColor clearColor];
         
         //消除锯齿
         self.layer.allowsEdgeAntialiasing = YES;
@@ -224,6 +224,7 @@
 - (void)setReuseView:(UIView *)reuseView {
     if (_reuseView != reuseView) {
         _reuseView = reuseView;
+        reuseView.layer.allowsEdgeAntialiasing = YES;
         [self addSubview:reuseView];
         reuseView.frame = self.bounds;
     }

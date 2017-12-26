@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.dataArray = @[@"iOS", @"Android", @"Web", @"Java"];
+    self.dataArray = @[@"01", @"02", @"03"];
     [self.view addSubview:self.cardView];
 }
 
