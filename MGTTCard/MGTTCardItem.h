@@ -17,6 +17,7 @@ typedef NS_ENUM(NSUInteger, MGTTCardItemRemoveDirection) {
 
 @protocol MGTTCardItemDelegate <NSObject>
 
+- (void)cardItemWillBeginMove:(MGTTCardItem *)card;
 - (void)cardItemBeginRemove:(MGTTCardItem *)card Direction:(MGTTCardItemRemoveDirection)direction;
 - (void)cardItemRemoved:(MGTTCardItem *)card Direction:(MGTTCardItemRemoveDirection)direction;
 - (void)cardItemDidClick:(MGTTCardItem *)card;

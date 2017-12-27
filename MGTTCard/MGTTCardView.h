@@ -16,6 +16,7 @@
 - (UIView *)cardView:(MGTTCardView *)cardView viewForItemAtIndex:(NSInteger)index reuseView:(UIView *)reuseView;
 
 @optional
+- (void)willBeginMoveItemInCardView:(MGTTCardView *)cardView;
 - (void)cardView:(MGTTCardView *)cardView didSelectView:(UIView *)itemView atIndex:(NSInteger)index;
 
 @end

@@ -53,6 +53,9 @@
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan:
         {
+            if (self.delegate) {
+                [self.delegate cardItemWillBeginMove:self];
+            }
             CGFloat locationY = [gesture locationInView:self].y;
             if(locationY < self.frame.size.height / 2) {
                 //在卡片的上半部分,正方向倾斜

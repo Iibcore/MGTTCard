@@ -140,6 +140,12 @@
     }
 }
 
+- (void)cardItemWillBeginMove:(MGTTCardItem *)card {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(willBeginMoveItemInCardView:)]) {
+        [self.delegate willBeginMoveItemInCardView:self];
+    }
+}
+
 - (void)cardItemBeginRemove:(MGTTCardItem *)card Direction:(MGTTCardItemRemoveDirection)direction {
     //开启下层视图触摸事件
     [self.disPlayArray removeObject:card];
